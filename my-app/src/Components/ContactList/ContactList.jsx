@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./ContactList.module.css";
-const ContactList = ({ contacts }) => (
+const ContactList = ({ contacts, onDeleteContact }) => (
   <ul className={style.list}>
     <p>Contacts</p>
     {contacts.map(({ name, id, number }) => (
@@ -11,12 +11,14 @@ const ContactList = ({ contacts }) => (
           {number}
         </p>
 
-        <button className={style.btn} type="button"></button>
+        <button
+          onClick={() => onDeleteContact(id)}
+          className={style.btn}
+          type="button"
+        ></button>
       </li>
     ))}
   </ul>
 );
 
 export default ContactList;
-
-// Больше ничего не нужно!!!!!!!!!!!!!!!

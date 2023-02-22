@@ -1,7 +1,7 @@
 import { Component } from "react";
 import shortid from "shortid";
 import style from "./FormContact.module.css";
-console.log(style);
+
 class FormContact extends Component {
   state = {
     name: "",
